@@ -57,9 +57,9 @@ namespace UserDetailsClient
                     Device.BeginInvokeOnMainThread(() => { btnSignInSignOut.Text = "Sign in"; });
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                await DisplayAlert("Something went wrong with the API call", ex.Message, "Dismiss");
             }
         }
 
