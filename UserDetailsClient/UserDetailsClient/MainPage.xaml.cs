@@ -14,7 +14,7 @@ namespace UserDetailsClient
 {
     public partial class MainPage : ContentPage
     {
-        
+
         public MainPage()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace UserDetailsClient
             // let's see if we have a user in our belly already
             try
             {
-                AuthenticationResult ar = 
+                AuthenticationResult ar =
                     await App.PCA.AcquireTokenSilentAsync(App.Scopes, App.PCA.Users.FirstOrDefault());
                 await RefreshUserDataAsync(ar.AccessToken);
                 Device.BeginInvokeOnMainThread(() => { btnSignInSignOut.Text = "Sign out"; });
@@ -97,5 +97,5 @@ namespace UserDetailsClient
         }
     }
 
-    
+
 }
