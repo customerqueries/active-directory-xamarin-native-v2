@@ -60,9 +60,8 @@ Create a new app at [apps.dev.microsoft.com](https://apps.dev.microsoft.com), or
 
 #### [OPTIONAL] Step 3a: Configure the iOS project with your apps' return URI
 
-1. Open the `UserDetailsClient.iOS\AppDelegate.cs` file.
-2. Open the `UserDetailsClient.iOS\info.plist` file in a text editor (opening it in Visual Studio won't work for this step as you need to edit the text)
-3. In the URL types section, add an entry for the authorization schema used in your redirectUri:
+1. Open the `UserDetailsClient.iOS\info.plist` file in a text editor (opening it in Visual Studio won't work for this step as you need to edit the text)
+2. In the URL types section, add an entry for the authorization schema used in your redirectUri:
 ```Xml
     <key>CFBundleURLTypes</key>
        <array>

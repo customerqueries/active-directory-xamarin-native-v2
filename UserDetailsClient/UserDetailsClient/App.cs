@@ -27,7 +27,7 @@ namespace UserDetailsClient
 		{
 			PCA = new PublicClientApplication(ClientID)
 			{
-				RedirectUri = $"msal{App.ClientID}://auth",
+				RedirectUri = $"https://login.microsoftonline.com/common/oauth2/nativeclient",
 			};
 
 			MainPage = new NavigationPage(new UserDetailsClient.MainPage());        
