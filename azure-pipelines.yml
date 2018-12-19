@@ -10,11 +10,15 @@ pool:
   vmImage: 'macOS-10.13'
 
 steps:
+- script: sudo cat $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 
+  displayName: 'View select the Xamarin SDK version script'
+  enabled: true
+
 # To manually select a Xamarin SDK version on the Microsoft-hosted macOS agent,
 # configure this task with the *Mono* version that is associated with the
 # Xamarin SDK version that you need, and set the "enabled" property to true.
 # See https://go.microsoft.com/fwlink/?linkid=871629
-- script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_12_0_XC10_PRE
+- script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_12_0
   displayName: 'Select the Xamarin SDK version'
   enabled: true
 
