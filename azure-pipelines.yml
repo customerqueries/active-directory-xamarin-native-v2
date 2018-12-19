@@ -17,8 +17,9 @@ steps:
 - script: |
     sudo ls -l /Library/Frameworks/Mono.framework/Versions
     sudo ls -l /Library/Frameworks/Xamarin.iOS.framework/Versions
+    sudo ls -l /Library/Frameworks/Mono.framework/Versions/
   displayName: 'View existing Xamarin SDK version'
-  enabled: false 
+  enabled: true 
 
 # To manually select a Xamarin SDK version on the Microsoft-hosted macOS agent,
 # configure this task with the *Mono* version that is associated with the
@@ -62,3 +63,4 @@ steps:
     packageApp: false
     signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
     signingProvisioningProfileID: '$(APPLE_PROV_PROFILE_UUID)'
+  enabled: false
